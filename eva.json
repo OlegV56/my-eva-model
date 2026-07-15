@@ -1,0 +1,20 @@
+{
+  type: "micro",
+  wake_word: "eva",
+  author: "Oleg",
+  trained_languages: ["ru"],
+  version: 2,
+  model: "https://raw.githubusercontent.com/OlegV56/my-eva-model/main/eva.tflite",
+  micro: {
+    probability_cutoff: 0.5,
+    sliding_window_size: 10,
+    features: {
+      sample_rate: 16000,
+      spectrogram_length: 99,
+      num_mel_bins: 40,
+      mel_lower_edge_hertz: 20,
+      mel_upper_edge_hertz: 7600,
+      log_epsilon: 1e-12
+    }
+  }
+}
